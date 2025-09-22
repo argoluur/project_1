@@ -1,10 +1,8 @@
 const http = require("http");
-const fs = require("fs");
 const dateEt = require("./src/dateTimeET");
-const textRef = "txt/vanasonad.txt";
-const pageHead = '<!DOCTYPE html>\n<html lang="et">\n<head>\n\t<meta charset="utf-8">\n\t<title>Andrus Rinde, veebiprogrammeerimine</title>\n</head>\n<body>\n';
-const pageBody = '\t<h1>Argo Luur, veebiprogrammeerimine</h1>\n\t <p>See leht on loodud veebiprogrammeerimise kursusel <a href="https://www.tlu.ee">Tallinna Ülikoolis</a> ning ei sislda tõsiseltvõetavat sisu!</p>\n\t<p>Esialgu tutvusime lihtsalt HTML keelega, peatselt programmeerime.</p>\n\t<hr>';
-const pageFoot = '\n</body>\n</html>';
+const pageHead = '<!DOCTYPE html><html lang="et"><head><meta charset="utf-8"><title>Argo Luur</title><head><body>'
+const pageBody = '<hr><h1>Argo</h1><h2>Olen Argo! Õpin <a href="https://www.tlu.ee">Tallinna Ülikoolis</a></h2><hr><p>Lisasin kodust läbi tunneli teksti enda leheküljele!!<p><p><a href="https://greeny.cs.tlu.ee/~argoluur/">tagasi</a></p>'
+const pageFoot = '</body></html>'
 
 http.createServer(function(req, res){
 	res.writeHead(200, {"Content-type": "text/html"});
